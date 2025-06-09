@@ -7,6 +7,7 @@ import os
 import yfinance as yf
 import matplotlib.pyplot as plt
 from datetime import datetime, timedelta
+from sentimental_analysis import analyze_stock_sentiment
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -61,9 +62,11 @@ def summarize_stock(stock_symbol):
 
 # Example usage:
 stock = input("Enter the stock symbol (e.g., AAPL): ")
-summarize_stock(stock)
 
-# Plot stock price for the last 4 months
+
+response = summarize_stock(stock)
+print(response) 
+
 def plot_stock_chart(ticker):
     end_date = datetime.today()
     start_date = end_date - timedelta(days=120)  # Approx. 4 months
@@ -78,6 +81,14 @@ def plot_stock_chart(ticker):
     plt.grid(True)
     plt.tight_layout()
     plt.show()
+
+
+result = analyze_stock_sentiment(str(response))
+print(f"Buy Percent: {result['buy_percent']}%")
+print(f"Hold Percent: {result['hold_percent']}%")
+print(f"Sell Percent: {result['sell_percent']}%")
+print(f"Recommendation: {result['recommendation']}")
+print(f"Reasoning: {result['reasoning']}")
 
 plot_stock_chart(stock)
 
