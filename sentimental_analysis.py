@@ -334,30 +334,5 @@ def generate_reasoning(text: str, recommendation: str) -> str:
     
     return reasoning
 
-# Example usage
-if __name__ == "__main__":
-    sample_news = """
-    Latest News for NVDA Stock
 
-    Here are some recent developments and market trends for NVDA stock:
-    . NVIDIA Corporation (NVDA) achieved a milestone with double-digit revenue growth in the fiscal 2026 first quarter, leading to a business boom.
-    . The company's stock price has been on a rollercoaster, peaking at $153.13 early in 2025 and dropping to a 52-week low of $86.62 in April, before rising to near $142.
-    . NVIDIA's CEO, Jensen Huang, has been described as a "lover, not a fighter" by Jim Cramer, suggesting a positive outlook for the company.
-    . NVIDIA's market capitalization has reached $3.4 trillion, making it the most valuable company in the world.
-    . The company's stock price has rallied over 1,500% in the past five years, driven by its dominance in the AI market.
-    . Some market watchers are optimistic about NVIDIA's prospects, with predictions of a $6 trillion valuation by 2030.
-
-    Sources:
-    . MSN Money - Is NVIDIA's Rise in Value a Sign to Invest in NVDA Stock?
-    . AOL - Prediction: This Artificial Intelligence (AI) Stock Could Hit a $6 Trillion Valuation by 2030
-    . 24/7 Wall St. - Nvidia (NASDAQ: NVDA) Stock Price Prediction for 2025: Where Will It Be in 1 Year (June 4)
-    . MSN Money - NVIDIA Corporation (NVDA): CEO Jensen Huang Is A Lover, Not A Fighter, Says Jim Cramer
-    . MarketWatch - Did Nvidia just dispel the bear case for its stock? Why this analyst thinks so.
-    """
     
-    result = analyze_stock_sentiment(sample_news)
-    print(f"Buy Percent: {result['buy_percent']}%")
-    print(f"Hold Percent: {result['hold_percent']}%")
-    print(f"Sell Percent: {result['sell_percent']}%")
-    print(f"Recommendation: {result['recommendation']}")
-    print(f"Reasoning: {result['reasoning']}")
