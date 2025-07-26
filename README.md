@@ -79,7 +79,7 @@ This system is powered by a **multi-agent architecture**:
 
 You can **customize the agents' behavior** by modifying their `instructions` directly within the Python code. This allows you to refine how they search for information or present their findings.
 
-Additionally, the `plot_stock_chart` function can be adjusted to **change the duration** of the stock chart (e.g., setting `timedelta(days=365)` would display data for a full year).
+
 
 -----
 
